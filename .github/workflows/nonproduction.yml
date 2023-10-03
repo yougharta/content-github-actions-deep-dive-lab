@@ -31,6 +31,5 @@ jobs:
             npm run build
             
       - name: Upload to S3
-        uses: aws-actions/aws-s3-deploy@v2
-        with:
-          args: --recursive --exclude '.git/*' . s3://cfst-3457-9e0fa4c34d787b76140e9528f-nonprodbucket-b3o9ao293qeb/ --acl public-read
+        run: aws s3 cp . s3://cfst-3457-9e0fa4c34d787b76140e9528f-nonprodbucket-b3o9ao293qeb/ --recursive --acl public-read
+ 
