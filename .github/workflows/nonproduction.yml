@@ -33,6 +33,6 @@ jobs:
       - name: check build
         run: ls -la
             
-      # - name: Upload to S3
-      #   run: aws s3 cp . s3://cfst-3457-9e0fa4c34d787b76140e9528f-nonprodbucket-b3o9ao293qeb/ --recursive --acl public-read
+      - name: Upload to S3
+        run: aws s3 cp ./public s3://cfst-3457-9e0fa4c34d787b76140e9528f-nonprodbucket-b3o9ao293qeb/ --recursive --acl public-read
  
